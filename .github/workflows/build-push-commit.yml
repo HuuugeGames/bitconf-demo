@@ -17,4 +17,4 @@ jobs:
     - name: short-sha  
       uses: benjlevesque/short-sha@v1.2
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag argicd-demo:${{ steps.short-sha.outputs.sha }}
+      run: docker build . -f Dockerfile -t argocd_demo:${{ steps.short-sha.outputs.sha }}
